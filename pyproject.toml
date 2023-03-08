@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "evg-config-changes-verifier"
+version = "0.1.0"
+description = ""
+authors = ["Mikhail Shchatko <mikhail.shchatko@mongodb.com>"]
+readme = "README.md"
+packages = [{include = "evg_config_changes_verifier", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
