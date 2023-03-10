@@ -6,9 +6,32 @@ authors = ["Mikhail Shchatko <mikhail.shchatko@mongodb.com>"]
 readme = "README.md"
 packages = [{include = "evg_config_changes_verifier", from = "src"}]
 
+[tool.poetry.scripts]
+verify-evg-config-changes = "evg_config_changes_verifier.cli:main"
+
 [tool.poetry.dependencies]
 python = "^3.9"
+structlog = "^22.3.0"
+click = "^8.1.3"
+inject = "^4.3.1"
+plumbum = "^1.8.1"
+pyyaml = "^6.0"
 
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+isort = "^5.12.0"
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 100
 
 [build-system]
 requires = ["poetry-core"]
