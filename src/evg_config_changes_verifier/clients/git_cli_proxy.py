@@ -41,7 +41,7 @@ class GitCliProxy:
         Run git-diff command.
 
         :param no_pager: Do not pipe Git output into a pager.
-        :param target_branch: The branch that patch will be merged onto.
+        :param target_branch: The branch that patch will be merged into.
         :param output_file: Output to a patch file that can be applied with git-apply.
         :return: Git-diff command output.
         """
